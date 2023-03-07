@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ------------CDN Tailwind------------------->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- --------CDN flags------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Genos:wght@200;400&family=Rajdhani:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <title>Jose Leon - Web Designer</title>
+</head>
+<!-- genos, rajdhani, Audiowide -->
+<!-- font-family: 'Audiowide', cursive;
+font-family: 'Genos', sans-serif;
+font-family: 'Rajdhani', sans-serif; -->
+<!-- bg-[#171717] -->
+<!-- text-[#34CB4C] para logo verde -->
+
+<body class="bg-[#171717]">
+    <!-- <header class="h-[70px] flex justify-between items-center bg-[#00D8FF] bg-opacity-10"> -->
+    <header class="h-[70px] flex justify-between items-center bg-[#212121] ">
+
+        <p class="px-3 text-white text-2xl font-['Audiowide']">J :: <span class="text-[#00a6ed]">leon</span></p>
+        <!-- menu inside header  -->
+        <nav class="flex items-center">
+            <ul class="hidden md:inline-flex px-3  space-x-8 text-white hover:[#08A045]">
+                <li><a class="hover:text-[#00a6ed]" href="">About me</a></li>
+                <li><a class="hover:text-[#00a6ed]" href="">Skills</a></li>
+                <li><a class="hover:text-[#00a6ed]" href="">Projects</a></li>
+                <li><a class="hover:text-[#00a6ed]" href="">Contact</a></li>
+            </ul>
+
+            <button class="text-white">
+                <span class="fi fi-us mx-1"></span><span class="mr-1">EN</span>
+            </button>
+
+            <button class="rounded-lg mx-2 py-1.5  bg-[#585858] px-2 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-8 w-8">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg> </button>
+        </nav>
+    </header>
+    <main class="flex flex-col items-center">
+        <!-- Avatar and info -->
+        <section class="my-5 flex flex-col items-center ">
+            <figure class="mt-5 rounded-full bg-[#171717] text-white bg-[url('/img/circuit-board.svg')]">
+                <img class="inline-block h-72 w-72 rounded-full shadow-2xl shadow-cyan-500/50 ring-8 ring-[#00a6ed] "
+                    src="img/cartoon7.png" alt="">
+            </figure>
+            <!-- icons around avatar  -->
+            <div class="w-80 mb-2 flex justify-between ">
+                <img class="rounded-lg shadow-md shadow-cyan-500/50" src="img/Group 2.svg" alt="">
+                <img class="rounded-lg shadow-md shadow-cyan-500/50" src="img/Group 4.svg" alt="">
+
+            </div>
+            <div class="w-44 h-12 flex justify-between items-start">
+                <img class="rounded-lg shadow-md shadow-cyan-500/50" src="img/Group 3.svg" alt="">
+                <img class="rounded-lg shadow-md shadow-cyan-500/50 self-end" src="img/Group 6.svg" alt="">
+                <img class="rounded-lg shadow-md shadow-cyan-500/50" src="img/Group 5.svg" alt="">
+
+            </div>
+        </section>
+        <!-- details about me  -->
+        <section class="my-2">
+            <p class="my-1 text-white text-xl">Hi, I'm <a class="font-bold underline decoration-sky-500">José León</a>
+            </p>
+            <!-- <p class="text-[#00a6ed] text-5xl font-bold">Web Designer</p> -->
+            <p class="text-[#00a6ed] text-[2.7rem] font-['Audiowide'] ">Web Designer</p>
+            <!-- <span class="font-['Audiowide'] text-5xl bg-clip-text text-transparent bg-gradient-to-r bg-gradient-to-br from-green-400 to-blue-600">Web Designer</span> -->
+            <p class="my-1 text-white text-xl">based in Frankfurt Germany</p>
+        </section>
+        <!-- buttons contact/download cv  -->
+        <section class=" m-auto">
+            <button
+                class="w-32 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+                <span
+                    class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-gradient-to-br from-green-400 to-blue-600  rounded-md group-hover:bg-opacity-0">
+                    Contact Me
+                </span>
+            </button>
+
+            <button
+                class="w-32 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+                <span
+                    class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    Download CV
+                </span>
+            </button>
+        </section>
+
+        <!-- about section  -->
+        <section class="w-full py-5">
+            <header class="border-solid border-y border-sky-500 bg-[#212121]">
+                <p class="py-3 text-[#00a6ed] text-3xl text-center">About</p>
+            </header>
+            <p class="my-5 mx-4 text-white">
+                I’m Jose León, Lorem
+                ipsum dolor sit amet consectetur, <a class="underline decoration-sky-500">adipisicing elit.</a> Odit, perferendis dignissimos nisi tempore harum
+                nostrum repellendus, <a class="underline decoration-pink-500">ullam reprehenderit fuga</a> quisquam voluptatem laudantium voluptas magnam dolores!
+                Sequi unde <a class="underline decoration-indigo-500"> distinctio illum?</a>
+            </p>
+
+            <article class="my-2.5 mx-5 h-16 rounded-lg bg-[#212121] flex">
+                <section class="flex items-center rounded-l-lg  bg-[#00a6ed]">
+                    <p style="writing-mode: vertical-lr; transform:rotate(180deg);" class="px-1 text-white">Name
+                    </p>
+                </section>
+                <section class="m-auto">
+                    <p class="text-white text-center">José León Pineda</p>
+                </section>
+            </article>
+
+            <article class="my-2.5 mx-5 h-16 rounded-lg bg-[#212121] flex">
+                <section class="flex items-center rounded-l-lg  bg-[#00a6ed]">
+                    <p style="writing-mode: vertical-lr; transform:rotate(180deg);" class="px-1 text-white">Email
+                    </p>
+                </section>
+                <section class="m-auto">
+                    <p class="text-white text-center">jleon80@webdesign.com</p>
+                </section>
+            </article>
+
+            <article class="my-2.5 mx-5 h-16 rounded-lg bg-[#212121] flex">
+                <section class="flex items-center rounded-l-lg  bg-[#00a6ed]">
+                    <p style="writing-mode: vertical-lr; transform:rotate(180deg);" class="px-1 text-white">Phone
+                    </p>
+                </section>
+                <section class="m-auto">
+                    <p class="text-white text-center">+49 1234567890</p>
+                </section>
+            </article>
+        </section>
+
+        <!-- skills section  -->
+        <section class="w-full py-5">
+            <header class="border-solid border-y border-sky-500 bg-[#212121]">
+                <p class="py-3 text-[#00a6ed] text-3xl text-center">Skills</p>
+            </header>
+            <article class="my-2.5 mx-5 rounded-lg bg-[#212121] flex">
+                <section class="flex items-center rounded-l-lg  bg-[#00a6ed]">
+                    <p style="writing-mode: vertical-lr; transform:rotate(180deg);" class="px-1 text-white">Using
+                        Now</p>
+                </section>
+                <section class="mx-auto py-3 text-white grid grid-cols-3 gap-y-2 gap-x-8 place-content-center ">
+                    <figure class="flex flex-col items-center">
+                        <img class="w-10 rounded-lg" src="img/Group 2.svg" alt="">
+                        <figcaption>HTML</figcaption>
+                    </figure>
+                    <figure class="flex flex-col items-center">
+                        <img class="w-10 rounded-lg" src="img/Group 3.svg" alt="">
+                        <figcaption>CSS</figcaption>
+                    </figure>
+                    <figure class="flex flex-col items-center">
+                        <img class="w-10 rounded-lg" src="img/Group 5.svg" alt="">
+                        <figcaption>SASS</figcaption>
+                    </figure>
+                    <figure class="flex flex-col items-center">
+                        <img class="w-10 rounded-lg" src="img/Group 6.svg" alt="">
+                        <figcaption>Tailwind</figcaption>
+                    </figure>
+                    <figure class="flex flex-col items-center">
+                        <img class="w-10 rounded-lg" src="img/Group 4.svg" alt="">
+                        <figcaption>Bootstrap</figcaption>
+                    </figure>
+                </section>
+            </article>
+
+            <article class="my-2.5 mx-5 h-32 rounded-lg bg-[#212121] flex">
+                <section class="flex items-center rounded-l-lg  bg-[#00a6ed]">
+                    <p style="writing-mode: vertical-lr; transform:rotate(180deg);" class="px-1 text-white">
+                        Learning</p>
+                </section>
+                <section class="grid grid-cols-3 gap-8 items-center mx-auto text-white">
+                    <figure class="flex flex-col items-center">
+                        <img class="w-10 rounded-lg" src="img/javascript.svg" alt="">
+                        <figcaption>Javascript</figcaption>
+                    </figure>
+                    <figure class="flex flex-col items-center">
+                        <img class="w-10 rounded-lg" src="img/reactjs.svg" alt="">
+                        <figcaption>React</figcaption>
+                    </figure>
+                    <figure class="flex flex-col items-center">
+                        <img class="w-10 rounded-lg" src="img/nodedotjs.svg" alt="">
+                        <figcaption>Node JS</figcaption>
+                    </figure>
+                </section>
+            </article>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
