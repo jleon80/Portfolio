@@ -2,19 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ------------CDN Tailwind------------------->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ------------CDN Font awesome------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- --------CDN flags------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=Genos:wght@200;400&family=Rajdhani:wght@400;500&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
     <title>Jose Leon - Web Designer</title>
 </head>
@@ -27,181 +31,292 @@ font-family: 'Rajdhani', sans-serif; -->
 
 <body class="bg-[#171717]">
     <!-- <header class="h-[70px] flex justify-between items-center bg-[#00D8FF] bg-opacity-10"> -->
-    <header class="h-[70px] flex justify-between items-center bg-[#212121] ">
+    <header class="h-14 fixed w-full z-20 top-0 left-0">
 
-        <p class="px-3 text-white text-2xl font-['Audiowide']">J :: <span class="text-[#00a6ed]">leon</span></p>
         <!-- menu inside header  -->
-        <nav class="flex items-center">
-            <ul class="hidden md:inline-flex px-3  space-x-8 text-white hover:[#08A045]">
+        <nav class="bg-[#212121]">
+            <section class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+
+                <a href="#">
+                    <p class="px-3 text-white text-2xl xl:text-4xl font-['Audiowide']">
+                        J :: <span class="text-[#00a6ed]">leon</span>
+                    </p>
+                </a>
+
+                <section class="flex md:order-2">
+                    <button class="text-white">
+                        <span class="fi fi-us mx-1"></span><span class="mr-1">EN</span>
+                    </button>
+
+                    <button id="menu-button" class="md:hidden rounded-lg mx-2 py-1.5 bg-[#585858] px-2 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-8 w-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"
+                                class="invisible" />
+                        </svg>
+                    </button>
+                </section>
+
+                <section id="menu-container"
+                    class="transition-transform duration-1000 translate-x-16	  delay-1000 p-2 items-center justify-between hidden w-full md:flex md:w-auto md:order-1 mt-2">
+                    <!-- active link will be blue hover:bg-[#00a6ed], on hover gray hover:bg-gray-700 -->
+                    <ul
+                        class="space-y-6  md:space-y-0 h-[26rem] md:h-min flex flex-col  p-4 md:p-0 mt-4 text-white font-medium md:text-md border border-[#00a6ed] rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-[#212121]">
+                        <li><a class="menu-item mt-6 md:mt-0 block py-2 pl-3 pr-4  text-center text-white  rounded md:hover:bg-transparent md:hover:text-[#00a6ed] hover:bg-[#00a6ed]  md:p-0 "
+                                href="#"><i class="md:hidden m-2 fa-solid fa-circle-info"></i>About me</a></li>
+                        <li><a class="menu-item block py-2 pl-3 pr-4 text-center  rounded  md:hover:bg-transparent md:hover:text-[#00a6ed] md:p-0 text-white hover:bg-[#00a6ed] border-gray-700"
+                                href="#skills"><i class="md:hidden m-2 fa-solid fa-screwdriver-wrench"></i>Skills</a>
+                        </li>
+                        <li><a class="menu-item block py-2 pl-3 pr-4 text-center  rounded  md:hover:bg-transparent md:hover:text-[#00a6ed] md:p-0 text-white hover:bg-[#00a6ed] border-gray-700"
+                                href="#projects"><i class="md:hidden m-2 fa-solid fa-list-check"></i>Projects</a></li>
+                        <li><a class="menu-item block py-2 pl-3 pr-4 text-center  rounded  md:hover:bg-transparent md:hover:text-[#00a6ed] md:p-0 text-white hover:bg-[#00a6ed] border-gray-700"
+                                href="#contact"><i class="md:hidden m-2 fa-solid fa-user"></i>Contact</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+    </header>
+    <main class="flex flex-col items-center">
+        <!-- Avatar and info -->
+        <section
+            class="md:container mb-5 md:flex flex-row-reverse justify-center items-center md:space-x-10 md:space-x-reverse md:pt-20 ">
+            <section class="pt-16 md:pt-0 flex flex-col items-center">
+                <figure class="mt-5 rounded-full bg-[#171717] text-white bg-[url('/img/path24.svg')]">
+                    <img class="inline-block h-72 w-72 rounded-full shadow-2xl shadow-cyan-500/50 ring-8 ring-[#00a6ed]"
+                        src="img/cartoon7.png" alt="" />
+                </figure>
+                <!-- icons around avatar  -->
+                <div class="w-80 mb-2 flex justify-between">
+                    <img class="rounded-lg shadow-md shadow-cyan-500/50 transition duration-150 ease-in-out hover:-translate-y-2 hover:scale-150"
+                        src="img/Group 2.svg" alt="html image" />
+                    <img class="rounded-lg shadow-md shadow-cyan-500/50 transition duration-150 ease-in-out hover:-translate-y-2 hover:scale-150"
+                        src="img/Group 4.svg" alt="bootstrap image" />
+                </div>
+                <div class="w-52 h-12 flex justify-between items-start">
+                    <img class="rounded-lg shadow-md shadow-cyan-500/50 transition duration-150 ease-in-out hover:-translate-y-2 hover:scale-150"
+                        src="img/Group 3.svg" alt="css image" />
+                    <img class="w-8 rounded-lg shadow-md shadow-cyan-500/50 self-end transition duration-150 ease-in-out hover:-translate-y-2 hover:scale-150"
+                        src="img/javascript.svg" alt="javascript image" />
+                    <img class="rounded-lg shadow-md shadow-cyan-500/50 self-end transition duration-150 ease-in-out hover:-translate-y-2 hover:scale-150"
+                        src="img/Group 6.svg" alt="sass image" />
+                    <img class="rounded-lg shadow-md shadow-cyan-500/50 transition duration-150 ease-in-out hover:-translate-y-2 hover:scale-150"
+                        src="img/Group 5.svg" alt="tailwind image" />
+                </div>
+            </section>
+            <!-- details about me  -->
+            <!-- <section class="border border-yellow-500  md:order-1 md:m-auto"></section> -->
+            <section class="flex flex-col justify-center">
+                <section class="my-2">
+                    <p class="my-1 text-white text-xl">
+                        Hi, I'm
+                        <a class="font-bold underline decoration-sky-500">José León</a>
+                    </p>
+                    <!-- <p class="text-[#00a6ed] text-5xl font-bold">Web Designer</p> -->
+                    <p class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 text-[2.7rem] xl:text-[4rem] font-['Audiowide']">
+                        Web Designer
+                    </p>
+                    <!-- <span class="font-['Audiowide'] text-5xl bg-clip-text text-transparent bg-gradient-to-r bg-gradient-to-br from-green-400 to-blue-600">Web Designer</span> -->
+                    <p class="my-1 text-white text-xl">based in Frankfurt Germany</p>
+                </section>
+                <!-- buttons contact/download cv  -->
+                <section class="my-3">
+                    <button type="button" class="w-32 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none  focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center mr-2 mb-2">Contact me</button>
+
+                    <button class="w-32 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-cyan-800">
+                        <span class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            Download CV
+                        </span>
+                      </button>
+                </section>
+            </section>
+        </section>
+
+        <!-- about section  -->
+        <section class="w-full py-5">
+            <header class="my-5 border-solid border-y border-sky-500 bg-[#212121]">
+                <p class="py-3 text-[#00a6ed] text-3xl text-center">About</p>
+            </header>
+            <section class="container md:flex items-center m-auto md:px-20 2xl:px-96">
+                <p class="my-5 mx-4  text-white">
+
+                    Hello, my name is Jose Leon, I´m a Freelance <a class="underline decoration-indigo-500"><strong>Web
+                            Designer</strong></a> and <a
+                        class="underline decoration-pink-500"><strong>Javascript</strong></a> specialist.
+                    Feel free to take a look at my projects in the <a href="#projects"
+                        class="underline decoration-sky-500"><strong>Projects</strong></a> section.
+
+                </p>
+                <section class="">
+                    <article class="my-2.5 mx-5 h-16 rounded-lg bg-[#212121] flex">
+                        <section class="flex items-center rounded-l-lg bg-[#00a6ed]">
+                            <p style="writing-mode: vertical-lr; transform: rotate(180deg)" class="px-1 text-white">
+                                Name
+                            </p>
+                        </section>
+                        <section class="m-auto">
+                            <p class="text-white text-center px-3">José León Pineda</p>
+                        </section>
+                    </article>
+
+                    <article class="my-2.5 mx-5 h-16 rounded-lg bg-[#212121] flex">
+                        <section class="flex items-center rounded-l-lg bg-[#00a6ed]">
+                            <p style="writing-mode: vertical-lr; transform: rotate(180deg)" class="px-1 text-white">
+                                Email
+                            </p>
+                        </section>
+                        <section class="m-auto">
+                            <p class="text-white text-center px-3">jleon80@webdesign.com</p>
+                        </section>
+                    </article>
+                </section>
+
+            </section>
+
+        </section>
+
+        <!-- skills section  -->
+        <section id="skills" class="w-full py-5">
+            <header class="my-5 border-solid border-y border-sky-500 bg-[#212121]">
+                <p class="py-3 text-[#00a6ed] text-3xl text-center">Skills</p>
+            </header>
+            <section class="container flex flex-col items-center m-auto">
+                <article class="md:w-3/5 m-5 rounded-lg bg-[#212121] flex">
+                    <section class="flex items-center rounded-l-lg bg-[#00a6ed]">
+                        <p style="writing-mode: vertical-lr; transform: rotate(180deg)" class="px-1 text-white">
+                            Using Now
+                        </p>
+                    </section>
+                    <section
+                        class="mx-auto p-5 text-white grid grid-cols-3 md:grid-cols-6  gap-y-2 gap-x-3 md:gap-x-8 place-content-center">
+                        <figure class="flex flex-col items-center">
+                            <img class="w-10 rounded-lg" src="img/Group 2.svg" alt="" />
+                            <figcaption>HTML</figcaption>
+                        </figure>
+                        <figure class="flex flex-col items-center">
+                            <img class="w-10 rounded-lg" src="img/Group 3.svg" alt="" />
+                            <figcaption>CSS</figcaption>
+                        </figure>
+                        <figure class="flex flex-col items-center">
+                            <img class="w-10 rounded-lg" src="img/javascript.svg" alt="" />
+                            <figcaption>Javascript</figcaption>
+                        </figure>
+                        <figure class="flex flex-col items-center">
+                            <img class="w-10 rounded-lg" src="img/Group 6.svg" alt="" />
+                            <figcaption>SASS</figcaption>
+                        </figure>
+                        <figure class="flex flex-col items-center">
+                            <img class="w-10 rounded-lg" src="img/Group 5.svg" alt="" />
+                            <figcaption>Tailwind</figcaption>
+                        </figure>
+                        <figure class="flex flex-col items-center">
+                            <img class="w-10 rounded-lg" src="img/Group 4.svg" alt="" />
+                            <figcaption>Bootstrap</figcaption>
+                        </figure>
+                    </section>
+                </article>
+
+                <article class="md:w-3/5 m-5 rounded-lg bg-[#212121] flex">
+                    <section class="flex items-center rounded-l-lg bg-[#00a6ed]">
+                        <p style="writing-mode: vertical-lr; transform: rotate(180deg)" class="px-1 text-white">
+                            Learning
+                        </p>
+                    </section>
+                    <section class="p-5 grid grid-cols-3 gap-8 items-center mx-auto text-white">
+                        <figure class="flex flex-col items-center">
+                            <img class="w-10 rounded-lg" src="img/reactjs.svg" alt="" />
+                            <figcaption>React</figcaption>
+                        </figure>
+                        <figure class="flex flex-col items-center">
+                            <img class="w-10 rounded-lg" src="img/nodedotjs.svg" alt="" />
+                            <figcaption>Node JS</figcaption>
+                        </figure>
+                    </section>
+                </article>
+            </section>
+        </section>
+        <!-- projects section  -->
+        <section id="projects" class="w-full py-5">
+            <header class="border-solid border-y border-sky-500 bg-[#212121]">
+                <p class="py-3 text-[#00a6ed] text-3xl text-center">Projects</p>
+            </header>
+            <section class="container flex flex-col items-center m-auto">
+
+                <article class="text-white my-2.5 mx-5 h-16 rounded-lg bg-[#212121]">
+                    Empty
+                </article>
+            </section>
+        </section>
+        <!-- contact section  -->
+        <section id="contact" class="w-full py-5">
+            <header class="border-solid border-y border-sky-500 bg-[#212121]">
+                <p class="py-3 text-[#00a6ed] text-3xl text-center">Contact</p>
+            </header>
+            <section class="container flex flex-col items-center m-auto">
+
+            <form class="m-5 p-3 rounded-lg bg-[#212121]" action="" method="post">
+                <input type="text" name="name" id="name"
+                    class="block w-full px-2 rounded-lg mt-5 bg-neutral-700 border border-neutral-600 text-white text-lg"
+                    placeholder="Your name here" required />
+                <input type="email" name="email" id="email"
+                    class="block w-full px-2 rounded-lg mt-3 bg-neutral-700 border border-neutral-600 text-white text-lg"
+                    placeholder="name@example.com" required />
+                <textarea style="resize: none;" id="message" name="message" rows="4" cols="33"
+                    placeholder="Your message here" required
+                    class="w-full mt-3 px-2 bg-neutral-700 rounded-lg border border-neutral-600 text-white text-lg"></textarea>
+
+                <button type="button" class="mt-1 w-32 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none  focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center mr-2 mb-2">Send</button>
+
+            </form>
+            </section>
+            <!-- <article class="my-2.5 mx-5 h-16 rounded-lg bg-[#212121]"></article> -->
+        </section>
+    </main>
+
+    <footer class="">
+        <section class="py-3 bg-[#212121] flex justify-around items-center">
+
+                <a href="#" class="flex flex-col items-center justify-center md:mr-28">
+                    <p class="text-white text-2xl font-['Audiowide']">
+                        J :: <span class="text-[#00a6ed]">leon</span>
+                    </p>
+                    <p class="text-[#00a6ed] font-normal font-['Audiowide']">{ Web Designer }</p>
+                </a>
+
+            <ul class="md:flex space-y-2 md:space-y-0 md:space-x-8 text-white">
+                <li><a class="text-2xl hover:text-[#00a6ed]" href=""><i class="fa-brands fa-github"></i></a></li>
+                <li><a class="text-2xl hover:text-[#00a6ed]" href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a class="text-2xl hover:text-[#00a6ed]" href=""><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+
+            <ul class="md:flex space-y-2 md:space-y-0 md:space-x-4 text-white">
                 <li><a class="hover:text-[#00a6ed]" href="">About me</a></li>
                 <li><a class="hover:text-[#00a6ed]" href="">Skills</a></li>
                 <li><a class="hover:text-[#00a6ed]" href="">Projects</a></li>
                 <li><a class="hover:text-[#00a6ed]" href="">Contact</a></li>
             </ul>
-
-            <button class="text-white">
-                <span class="fi fi-us mx-1"></span><span class="mr-1">EN</span>
-            </button>
-
-            <button class="rounded-lg mx-2 py-1.5  bg-[#585858] px-2 text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="h-8 w-8">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg> </button>
-        </nav>
-    </header>
-    <main class="flex flex-col items-center">
-        <!-- Avatar and info -->
-        <section class="my-5 flex flex-col items-center ">
-            <figure class="mt-5 rounded-full bg-[#171717] text-white bg-[url('/img/circuit-board.svg')]">
-                <img class="inline-block h-72 w-72 rounded-full shadow-2xl shadow-cyan-500/50 ring-8 ring-[#00a6ed] "
-                    src="img/cartoon7.png" alt="">
-            </figure>
-            <!-- icons around avatar  -->
-            <div class="w-80 mb-2 flex justify-between ">
-                <img class="rounded-lg shadow-md shadow-cyan-500/50" src="img/Group 2.svg" alt="">
-                <img class="rounded-lg shadow-md shadow-cyan-500/50" src="img/Group 4.svg" alt="">
-
-            </div>
-            <div class="w-44 h-12 flex justify-between items-start">
-                <img class="rounded-lg shadow-md shadow-cyan-500/50" src="img/Group 3.svg" alt="">
-                <img class="rounded-lg shadow-md shadow-cyan-500/50 self-end" src="img/Group 6.svg" alt="">
-                <img class="rounded-lg shadow-md shadow-cyan-500/50" src="img/Group 5.svg" alt="">
-
-            </div>
         </section>
-        <!-- details about me  -->
-        <section class="my-2">
-            <p class="my-1 text-white text-xl">Hi, I'm <a class="font-bold underline decoration-sky-500">José León</a>
-            </p>
-            <!-- <p class="text-[#00a6ed] text-5xl font-bold">Web Designer</p> -->
-            <p class="text-[#00a6ed] text-[2.7rem] font-['Audiowide'] ">Web Designer</p>
-            <!-- <span class="font-['Audiowide'] text-5xl bg-clip-text text-transparent bg-gradient-to-r bg-gradient-to-br from-green-400 to-blue-600">Web Designer</span> -->
-            <p class="my-1 text-white text-xl">based in Frankfurt Germany</p>
+        <section>
+            <p class="py-2 text-center text-white">© 2023 Jose Leon</p>
         </section>
-        <!-- buttons contact/download cv  -->
-        <section class=" m-auto">
-            <button
-                class="w-32 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
-                <span
-                    class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-gradient-to-br from-green-400 to-blue-600  rounded-md group-hover:bg-opacity-0">
-                    Contact Me
-                </span>
-            </button>
+    </footer>
 
-            <button
-                class="w-32 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
-                <span
-                    class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                    Download CV
-                </span>
-            </button>
-        </section>
-
-        <!-- about section  -->
-        <section class="w-full py-5">
-            <header class="border-solid border-y border-sky-500 bg-[#212121]">
-                <p class="py-3 text-[#00a6ed] text-3xl text-center">About</p>
-            </header>
-            <p class="my-5 mx-4 text-white">
-                I’m Jose León, Lorem
-                ipsum dolor sit amet consectetur, <a class="underline decoration-sky-500">adipisicing elit.</a> Odit, perferendis dignissimos nisi tempore harum
-                nostrum repellendus, <a class="underline decoration-pink-500">ullam reprehenderit fuga</a> quisquam voluptatem laudantium voluptas magnam dolores!
-                Sequi unde <a class="underline decoration-indigo-500"> distinctio illum?</a>
-            </p>
-
-            <article class="my-2.5 mx-5 h-16 rounded-lg bg-[#212121] flex">
-                <section class="flex items-center rounded-l-lg  bg-[#00a6ed]">
-                    <p style="writing-mode: vertical-lr; transform:rotate(180deg);" class="px-1 text-white">Name
-                    </p>
-                </section>
-                <section class="m-auto">
-                    <p class="text-white text-center">José León Pineda</p>
-                </section>
-            </article>
-
-            <article class="my-2.5 mx-5 h-16 rounded-lg bg-[#212121] flex">
-                <section class="flex items-center rounded-l-lg  bg-[#00a6ed]">
-                    <p style="writing-mode: vertical-lr; transform:rotate(180deg);" class="px-1 text-white">Email
-                    </p>
-                </section>
-                <section class="m-auto">
-                    <p class="text-white text-center">jleon80@webdesign.com</p>
-                </section>
-            </article>
-
-            <article class="my-2.5 mx-5 h-16 rounded-lg bg-[#212121] flex">
-                <section class="flex items-center rounded-l-lg  bg-[#00a6ed]">
-                    <p style="writing-mode: vertical-lr; transform:rotate(180deg);" class="px-1 text-white">Phone
-                    </p>
-                </section>
-                <section class="m-auto">
-                    <p class="text-white text-center">+49 1234567890</p>
-                </section>
-            </article>
-        </section>
-
-        <!-- skills section  -->
-        <section class="w-full py-5">
-            <header class="border-solid border-y border-sky-500 bg-[#212121]">
-                <p class="py-3 text-[#00a6ed] text-3xl text-center">Skills</p>
-            </header>
-            <article class="my-2.5 mx-5 rounded-lg bg-[#212121] flex">
-                <section class="flex items-center rounded-l-lg  bg-[#00a6ed]">
-                    <p style="writing-mode: vertical-lr; transform:rotate(180deg);" class="px-1 text-white">Using
-                        Now</p>
-                </section>
-                <section class="mx-auto py-3 text-white grid grid-cols-3 gap-y-2 gap-x-8 place-content-center ">
-                    <figure class="flex flex-col items-center">
-                        <img class="w-10 rounded-lg" src="img/Group 2.svg" alt="">
-                        <figcaption>HTML</figcaption>
-                    </figure>
-                    <figure class="flex flex-col items-center">
-                        <img class="w-10 rounded-lg" src="img/Group 3.svg" alt="">
-                        <figcaption>CSS</figcaption>
-                    </figure>
-                    <figure class="flex flex-col items-center">
-                        <img class="w-10 rounded-lg" src="img/Group 5.svg" alt="">
-                        <figcaption>SASS</figcaption>
-                    </figure>
-                    <figure class="flex flex-col items-center">
-                        <img class="w-10 rounded-lg" src="img/Group 6.svg" alt="">
-                        <figcaption>Tailwind</figcaption>
-                    </figure>
-                    <figure class="flex flex-col items-center">
-                        <img class="w-10 rounded-lg" src="img/Group 4.svg" alt="">
-                        <figcaption>Bootstrap</figcaption>
-                    </figure>
-                </section>
-            </article>
-
-            <article class="my-2.5 mx-5 h-32 rounded-lg bg-[#212121] flex">
-                <section class="flex items-center rounded-l-lg  bg-[#00a6ed]">
-                    <p style="writing-mode: vertical-lr; transform:rotate(180deg);" class="px-1 text-white">
-                        Learning</p>
-                </section>
-                <section class="grid grid-cols-3 gap-8 items-center mx-auto text-white">
-                    <figure class="flex flex-col items-center">
-                        <img class="w-10 rounded-lg" src="img/javascript.svg" alt="">
-                        <figcaption>Javascript</figcaption>
-                    </figure>
-                    <figure class="flex flex-col items-center">
-                        <img class="w-10 rounded-lg" src="img/reactjs.svg" alt="">
-                        <figcaption>React</figcaption>
-                    </figure>
-                    <figure class="flex flex-col items-center">
-                        <img class="w-10 rounded-lg" src="img/nodedotjs.svg" alt="">
-                        <figcaption>Node JS</figcaption>
-                    </figure>
-                </section>
-            </article>
-
-        </section>
+    <!-- <button type="button" class="mt-1 w-32 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none  focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center mr-2 mb-2">Send</button> -->
 
 
-    </main>
+    <button id="btn-goToTop" type="button"
+        class="fixed bottom-0 right-0 z-20 mx-3 my-3 hidden -rotate-90 text-white  font-medium rounded-full text-lg p-2.5 text-center  items-center mr-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none  focus:ring-cyan-800 ">
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+        </svg>
+        <span class="sr-only">Icon description</span>
+    </button>
 
+    <script src="js/index.js"></script>
 </body>
 
 </html>
