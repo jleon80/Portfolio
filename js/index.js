@@ -4,6 +4,7 @@ window.document.addEventListener("DOMContentLoaded", function () {
 
     const buttonMenu = document.querySelector('#menu-button');
     const menuItems = document.querySelector('#menu-container');
+    const btnContact = document.querySelector('#btn-contact');
 
     buttonMenu.addEventListener('click', () => {
         menuItems.classList.toggle('hidden');
@@ -40,6 +41,13 @@ window.document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    btnContact.addEventListener('click', () => {
+        const section = document.getElementById('contact');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
     //-----button  to go to top on scroll-----
     const mybutton = document.getElementById("btn-goToTop");
     mybutton.addEventListener("click", () => {
@@ -61,5 +69,3 @@ window.document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// animar entrada de menu
-// cubrir todo el port view con el menu 
