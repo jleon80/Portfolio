@@ -1026,7 +1026,7 @@ video {
   }
 
   80% {
-    transform: scaleY(1.2);
+    transform: scaleY(1.1);
   }
 
   100% {
@@ -1035,7 +1035,7 @@ video {
 }
 
 .animate-open-menu {
-  animation: open-menu 0.3s ease-in-out forwards;
+  animation: open-menu 0.4s ease-in-out forwards;
 }
 
 .touch-auto {
@@ -1171,6 +1171,10 @@ video {
 
 .snap-always {
   scroll-snap-stop: always;
+}
+
+.scroll-mt-40 {
+  scroll-margin-top: 10rem;
 }
 
 .list-inside {
@@ -2330,6 +2334,10 @@ video {
 
 .font-\[\'Audiowide\'\] {
   font-family: 'Audiowide';
+}
+
+.font-\[\'Genos\'\] {
+  font-family: 'Genos';
 }
 
 .text-2xl {

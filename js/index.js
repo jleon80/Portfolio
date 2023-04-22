@@ -7,7 +7,9 @@ window.document.addEventListener("DOMContentLoaded", function () {
     const btnContact = document.querySelector('#btn-contact');
 
     buttonMenu.addEventListener('click', () => {
+
         menuItems.classList.toggle('hidden');
+
         buttonMenu
             .querySelector("svg > path:nth-of-type(1)")
             .classList.toggle("invisible")

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -31,7 +31,7 @@ font-family: 'Rajdhani', sans-serif; -->
 <!-- bg-[#171717] -->
 <!-- text-[#34CB4C] para logo verde -->
 
-<body class="bg-[#171717]">
+<body class="bg-[#171717] ">
     <!-- <header class="h-[70px] flex justify-between items-center bg-[#00D8FF] bg-opacity-10"> -->
     <header class="h-14 fixed w-full z-20 top-0 left-0">
 
@@ -63,7 +63,7 @@ font-family: 'Rajdhani', sans-serif; -->
                 </section>
 
                 <section id="menu-container"
-                    class="p-2 items-center justify-between hidden w-full md:flex md:w-auto md:order-1 mt-2 origin-top animate-open-menu">
+                    class="p-2 items-center justify-between  w-full md:flex md:w-auto md:order-1 mt-2 origin-top animate-open-menu hidden">
                     <!-- active link will be blue hover:bg-[#00a6ed], on hover gray hover:bg-gray-700 -->
                     <ul
                         class="space-y-6  md:space-y-0 h-[26rem] md:h-min flex flex-col  p-4 md:p-0 mt-4 text-white font-medium md:text-md border border-[#00a6ed] rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-[#212121]">
@@ -83,8 +83,9 @@ font-family: 'Rajdhani', sans-serif; -->
     </header>
     <main class="flex flex-col items-center">
         <!-- Avatar and info -->
+        <!-- md:container al incio de la siguiente clase y quitar w-full -->
         <section
-            class="md:container mb-5 md:flex flex-row-reverse justify-center items-center md:space-x-10 md:space-x-reverse md:pt-20 ">
+            class="md:container mb-5 md:flex flex-row-reverse justify-center items-center md:space-x-10 md:space-x-reverse md:pt-20">
             <section class="pt-16 md:pt-0 flex flex-col items-center">
                 <figure class="mt-5 rounded-full bg-[#171717] text-white bg-[url('/img/path24.svg')]">
                     <img class="inline-block h-72 w-72 rounded-full shadow-2xl shadow-cyan-500/50 ring-8 ring-[#00a6ed]"
@@ -153,7 +154,7 @@ font-family: 'Rajdhani', sans-serif; -->
                 </p>
                 <section class="">
                     <article class="my-2.5 mx-5 h-16 rounded-lg bg-[#212121] flex">
-                        <section class="flex items-center rounded-l-lg bg-[#00a6ed]">
+                        <section class="flex items-center rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
                             <p style="writing-mode: vertical-lr; transform: rotate(180deg)" class="px-1 text-white">
                                 Name
                             </p>
@@ -164,7 +165,7 @@ font-family: 'Rajdhani', sans-serif; -->
                     </article>
 
                     <article class="my-2.5 mx-5 h-16 rounded-lg bg-[#212121] flex">
-                        <section class="flex items-center rounded-l-lg bg-[#00a6ed]">
+                        <section class="flex items-center rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
                             <p style="writing-mode: vertical-lr; transform: rotate(180deg)" class="px-1 text-white">
                                 Email
                             </p>
@@ -186,7 +187,7 @@ font-family: 'Rajdhani', sans-serif; -->
             </header>
             <section class="container flex flex-col items-center m-auto">
                 <article class="md:w-3/5 m-5 rounded-lg bg-[#212121] flex">
-                    <section class="flex items-center rounded-l-lg bg-[#00a6ed]">
+                    <section class="flex items-center rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
                         <p style="writing-mode: vertical-lr; transform: rotate(180deg)" class="px-1 text-white">
                             Using Now
                         </p>
@@ -221,7 +222,7 @@ font-family: 'Rajdhani', sans-serif; -->
                 </article>
 
                 <article class="md:w-3/5 m-5 rounded-lg bg-[#212121] flex">
-                    <section class="flex items-center rounded-l-lg bg-[#00a6ed]">
+                    <section class="flex items-center rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
                         <p style="writing-mode: vertical-lr; transform: rotate(180deg)" class="px-1 text-white">
                             Learning
                         </p>
@@ -240,7 +241,7 @@ font-family: 'Rajdhani', sans-serif; -->
             </section>
         </section>
         <!-- projects section  -->
-        <section id="projects" class="w-full py-5">
+        <section id="projects" class="w-full py-5 scroll-mt-40">
             <header class="border-solid border-y border-sky-500 bg-[#212121]">
                 <p class="py-3 text-[#00a6ed] text-3xl text-center">Projects</p>
             </header>
@@ -285,7 +286,7 @@ font-family: 'Rajdhani', sans-serif; -->
                     <p class="text-white text-2xl font-['Audiowide']">
                         J :: <span class="text-[#00a6ed]">leon</span>
                     </p>
-                    <p class="text-[#00a6ed] font-normal font-['Audiowide']">{ Web Designer }</p>
+                    <p class="text-[#00a6ed] font-normal font-['Genos'] text-xl">{ Web Designer }</p>
                 </a>
 
             <ul class="md:flex space-y-2 md:space-y-0 md:space-x-8 text-white">
