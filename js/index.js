@@ -71,3 +71,6 @@ window.document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// photo profile
+// https://www.youtube.com/watch?v=MJQwe2PUzAo&t=406s
+// https://www.youtube.com/watch?v=LBPtQ7JiLTY
