@@ -50,6 +50,45 @@ window.document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
+    // to show and hide buttons on the card - projects section 
+    const projectsCard = document.querySelectorAll('.card-projects');
+    projectsCard.forEach(card => {
+        card.addEventListener('mouseover', (e) => {
+            card.children[1].style.display = 'flex';
+            console.log(card.children[1])
+        });
+        card.addEventListener('mouseout', () => {
+            card.children[1].style.display = 'none';
+
+        });
+
+    });
+
+    // to open a modal window with information about the current project 
+    const btnOpenModal = document.querySelectorAll('.open-details-modal');
+    btnOpenModal.forEach(btn => {
+        btn.addEventListener('click', () => {
+           document.querySelector('#modal-window-portfolio').classList.toggle('invisible');
+        //    modal-window-movies
+        });
+    });
+
+
+
+    // to control the modal window in the projects area 
+    const btnCloseModal = document.querySelectorAll('.btn-close-modal');
+    btnCloseModal.forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelector('#modal-window-portfolio').classList.toggle('invisible');
+        });
+    } );
+
+    btnCloseModal.addEventListener("click", () => {
+        document.querySelector('#modal-window-portfolio').classList.toggle('invisible');
+
+    });
+
     //-----button  to go to top on scroll-----
     const mybutton = document.getElementById("btn-goToTop");
     mybutton.addEventListener("click", () => {
