@@ -66,18 +66,18 @@ font-family: 'Rajdhani', sans-serif; -->
                     class="bg-[rgba(0,0,0,0.6)] md:bg-[#212121]  p-4 items-center justify-between  w-full md:flex md:w-auto md:order-1  origin-top animate-open-menu hidden">
                     <!-- active link will be blue hover:bg-[#00a6ed], on hover gray hover:bg-gray-700 -->
                     <ul
-                        class="space-y-6  md:space-y-0 h-[26rem] md:h-min flex flex-col  p-2 md:p-0 mt-2 text-white font-medium md:text-md border border-[#00a6ed] rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-[#212121]">
+                        class=" md:text-md space-y-6  md:space-y-0 h-[26rem] md:h-min flex flex-col  text-center  p-2 md:p-0 mt-2 text-white font-medium   border border-[#00a6ed] rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-[#212121]">
                         <li><a class="menu-item mt-6 md:mt-0 block py-2 pl-3 pr-4  text-center text-white  rounded md:hover:bg-transparent md:hover:text-[#00a6ed] hover:bg-[#00a6ed]  md:p-0 "
                                 href="#"><span class="md:hidden m-2"><i class="fa-solid fa-circle-info"></i></span>About
                                 me</a></li>
-                        <li><a class="menu-item block py-2 pl-3 pr-4 text-center  rounded  md:hover:bg-transparent md:hover:text-[#00a6ed] md:p-0 text-white hover:bg-[#00a6ed] border-gray-700"
+                        <li><a class="menu-item block py-2 pl-3 pr-4   rounded  md:hover:bg-transparent md:hover:text-[#00a6ed] md:p-0 text-white hover:bg-[#00a6ed] border-gray-700"
                                 href="#skills"><span class="md:hidden m-2"><i
                                         class="fa-solid fa-screwdriver-wrench"></i></span>Skills</a>
                         </li>
-                        <li><a class="menu-item block py-2 pl-3 pr-4 text-center  rounded  md:hover:bg-transparent md:hover:text-[#00a6ed] md:p-0 text-white hover:bg-[#00a6ed] border-gray-700"
+                        <li><a class="menu-item block py-2 pl-3 pr-4   rounded  md:hover:bg-transparent md:hover:text-[#00a6ed] md:p-0 text-white hover:bg-[#00a6ed] border-gray-700"
                                 href="#projects"><span class="md:hidden m-2"><i
                                         class="fa-solid fa-list-check"></i></span>Projects</a></li>
-                        <li><a class="menu-item block py-2 pl-3 pr-4 text-center  rounded  md:hover:bg-transparent md:hover:text-[#00a6ed] md:p-0 text-white hover:bg-[#00a6ed] border-gray-700"
+                        <li><a class="menu-item block py-2 pl-3 pr-4   rounded  md:hover:bg-transparent md:hover:text-[#00a6ed] md:p-0 text-white hover:bg-[#00a6ed] border-gray-700"
                                 href="#contact"><span class="md:hidden m-2"><i
                                         class="fa-solid fa-user"></i></span>Contact</a></li>
                     </ul>
@@ -258,8 +258,8 @@ font-family: 'Rajdhani', sans-serif; -->
 
                 <!-- card projects  -->
                 <!-- card my portfolio  -->
-               <article
-                    class="card-projects relative text-white m-5 p-2 rounded-lg bg-[#212121]  transition duration-300 ease-in-out hover:scale-105 hover:border border-[#00a6ed]">
+                <article
+                    class="group card-projects relative text-white m-5 p-2 rounded-lg bg-[#212121]  transition duration-300 ease-in-out hover:scale-105 hover:border border-[#00a6ed]">
 
                     <figure class="w-lg shrink-0 ">
                         <figcaption class="font-bold text-lg p-2"><a href=""> My Portfolio </a></figcaption>
@@ -269,15 +269,15 @@ font-family: 'Rajdhani', sans-serif; -->
                     </figure>
 
                     <section
-                        class="space-x-3 btn-card-projects w-full h-full absolute top-0 left-0 justify-center items-center bg-neutral-950 bg-opacity-50 rounded-lg hidden">
+                        class="invisible group-hover:visible space-x-3 btn-card-projects w-full h-full absolute top-0 left-0 flex justify-center items-center bg-neutral-950 bg-opacity-60 rounded-lg">
                         <a href="https://portfolio-six-ivory-62.vercel.app/" target="_blank" rel="noopener noreferrer">
                             <button id="btn-contact" type="button"
-                                class="w-24 mt-10 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none  focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center">Visit<i
-                                class="ml-2 fa-solid fa-arrow-up-right-from-square"></i></button>
+                                class="-translate-y-40 group-hover:transition-transform  group-hover:duration-500 group-hover:translate-y-0 w-24  text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none  focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center">Visit<i
+                                    class="ml-2 fa-solid fa-arrow-up-right-from-square"></i></button>
                         </a>
 
                         <button
-                            class="open-details-modal w-24 mt-10 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-cyan-800">
+                            class="open-details-modal -translate-y-40 group-hover:transition-transform  group-hover:duration-500 group-hover:translate-y-0  w-24  relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-cyan-800">
                             <span
                                 class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-[#212121] rounded-md group-hover:bg-gray-600">
                                 Details
@@ -297,7 +297,7 @@ font-family: 'Rajdhani', sans-serif; -->
                                 <h3 class="text-2xl font-semibold text-white">
                                     My Portfolio
                                 </h3>
-                                <button id="" type="button"
+                                <button type="button"
                                     class="btn-close-modal text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-600 hover:text-white">
                                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -369,8 +369,8 @@ font-family: 'Rajdhani', sans-serif; -->
                 </div>
 
                 <!-- card my Movie Time  -->
-                <article
-                    class="card-projects relative text-white m-5 p-2 rounded-lg bg-[#212121]  transition duration-300 ease-in-out hover:scale-105 hover:border border-[#00a6ed]">
+                <article id="card-movie-time"
+                    class="group relative text-white m-5 p-2 rounded-lg bg-[#212121]  transition duration-300 ease-in-out hover:scale-105 hover:border border-[#00a6ed]">
 
                     <figure class="w-lg shrink-0">
                         <figcaption class="font-bold text-lg p-2"><a href=""> Movie Time </a></figcaption>
@@ -379,27 +379,29 @@ font-family: 'Rajdhani', sans-serif; -->
                             <img class="rounded-lg" src="img/projects/web-movietime-javascript.png" alt="">
                         </a>
                     </figure>
+
                     <section id=""
-                        class="space-x-3 btn-card-projects w-full h-full absolute top-0 left-0 justify-center items-center bg-neutral-950 bg-opacity-50 rounded-lg hidden">
+                        class="invisible group-hover:visible space-x-3 btn-card-projects w-full h-full absolute top-0 left-0 flex justify-center items-center bg-neutral-950 bg-opacity-60 rounded-lg">
                         <a href="https://proyecto-final-javascript-eight.vercel.app/" target="_blank"
                             rel="noopener noreferrer">
                             <button id="btn-contact" type="button"
-                                class="w-24 mt-10 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none  focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center">Visit<i
-                                class="ml-2 fa-solid fa-arrow-up-right-from-square"></i></button>
+                                class="-translate-y-40 group-hover:transition-transform  group-hover:duration-300 group-hover:translate-y-0 w-24 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none  focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center">Visit<i
+                                    class="ml-2 fa-solid fa-arrow-up-right-from-square"></i></button>
                         </a>
                         <button
-                            class="open-details-modal w-24 mt-10 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-cyan-800">
+                            class="open-details-modal -translate-y-40 group-hover:transition-transform  group-hover:duration-300 group-hover:translate-y-0 w-24 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-cyan-800">
                             <span
                                 class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-[#212121] rounded-md group-hover:bg-gray-600">
                                 Details
                             </span>
                         </button>
                     </section>
+
                 </article>
 
                 <!-- Main modal Movie Time-->
                 <div id="modal-window-movies"
-                    class="modal fixed flex justify-center items-center left-0 top-0 w-full h-full bg-[rgba(0,0,0,0.8)] z-40 invisible">
+                    class="modal fixed overflow-scroll flex justify-center items-center left-0 top-0 w-full h-full bg-[rgba(0,0,0,0.8)] z-40 invisible">
                     <div class="relative w-full max-w-4xl max-h-full">
                         <!-- Modal content -->
                         <div class="relative m-2 rounded-lg shadow bg-[#212121] ">
@@ -408,7 +410,7 @@ font-family: 'Rajdhani', sans-serif; -->
                                 <h3 class="text-2xl font-semibold text-white">
                                     Movie Time
                                 </h3>
-                                <button id="" type="button"
+                                <button type="button"
                                     class="btn-close-modal text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-600 hover:text-white">
                                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -464,7 +466,7 @@ font-family: 'Rajdhani', sans-serif; -->
                             </div>
                             <!-- Modal footer -->
                             <div class="flex items-center p-5 space-x-2 border-t rounded-b border-gray-600">
-                                <a href="https://proyecto-final-javascript-eight.vercel.app" target="_blank" >
+                                <a href="https://proyecto-final-javascript-eight.vercel.app" target="_blank">
                                     <button id="btn-contact" type="button"
                                         class="w-24 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none  focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center">Visit<i
                                             class="ml-2 fa-solid fa-arrow-up-right-from-square"></i></button>
@@ -513,6 +515,7 @@ font-family: 'Rajdhani', sans-serif; -->
             </section>
             <!-- <article class="my-2.5 mx-5 h-16 rounded-lg bg-[#212121]"></article> -->
         </section>
+
     </main>
 
     <footer class="">

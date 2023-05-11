@@ -38,7 +38,6 @@ window.document.addEventListener("DOMContentLoaded", function () {
     const menuATags = document.querySelectorAll('.menu-item');
     menuATags.forEach(aTag => {
         aTag.addEventListener('click', (e) => {
-            // aTag.classList.toggle('bg-[#00a6ed]');
             buttonMenu.click();
         });
     });
@@ -51,42 +50,35 @@ window.document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // to show and hide buttons on the card - projects section 
-    const projectsCard = document.querySelectorAll('.card-projects');
-    projectsCard.forEach(card => {
-        card.addEventListener('mouseover', (e) => {
-            card.children[1].style.display = 'flex';
-            console.log(card.children[1])
-        });
-        card.addEventListener('mouseout', () => {
-            card.children[1].style.display = 'none';
-
-        });
-
-    });
 
     // to open a modal window with information about the current project 
     const btnOpenModal = document.querySelectorAll('.open-details-modal');
     btnOpenModal.forEach(btn => {
-        btn.addEventListener('click', () => {
-           document.querySelector('#modal-window-portfolio').classList.toggle('invisible');
-        //    modal-window-movies
+        btn.addEventListener('click', (e) => {
+            let card = e.target.parentNode.parentNode.parentNode.id
+            card == 'card-movie-time' ? document.querySelector('#modal-window-movies').classList.toggle('invisible') : document.querySelector('#modal-window-portfolio').classList.toggle('invisible');
+
         });
     });
 
-
+//pasar boton a etiqueta a para abrir link desde javascript
 
     // to control the modal window in the projects area 
     const btnCloseModal = document.querySelectorAll('.btn-close-modal');
     btnCloseModal.forEach(btn => {
         btn.addEventListener('click', () => {
-            document.querySelector('#modal-window-portfolio').classList.toggle('invisible');
+
+            let modalWindowPortfolio = document.querySelector('#modal-window-portfolio')
+            if (!modalWindowPortfolio.classList.contains('invisible')){
+                                document.querySelector('#modal-window-portfolio').classList.toggle('invisible');
+            }
+
+            let modalWindowMovies = document.querySelector('#modal-window-movies')
+            if (!modalWindowMovies.classList.contains('invisible')){
+                                document.querySelector('#modal-window-movies').classList.toggle('invisible');
+            }
+
         });
-    } );
-
-    btnCloseModal.addEventListener("click", () => {
-        document.querySelector('#modal-window-portfolio').classList.toggle('invisible');
-
     });
 
     //-----button  to go to top on scroll-----
