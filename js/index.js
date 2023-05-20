@@ -29,7 +29,6 @@ window.document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener('scroll', (e) => {
         const isScrollInsideMenu = menuItems.contains(e.target);
-        // const isClickbuttonMenu = buttonMenu.contains(e.target);
         if (!isScrollInsideMenu && !menuItems.classList.contains('hidden')) {
             buttonMenu.click();
         }
@@ -56,12 +55,22 @@ window.document.addEventListener("DOMContentLoaded", function () {
     btnOpenModal.forEach(btn => {
         btn.addEventListener('click', (e) => {
             let card = e.target.parentNode.parentNode.parentNode.id
-            card == 'card-movie-time' ? document.querySelector('#modal-window-movies').classList.toggle('invisible') : document.querySelector('#modal-window-portfolio').classList.toggle('invisible');
 
+            switch (card) {
+                case 'card-portfolio':
+                    document.querySelector('#modal-window-portfolio').classList.toggle('invisible');
+                    break;
+                case 'card-movie-time':
+                    document.querySelector('#modal-window-movies').classList.toggle('invisible')
+                    break;
+                case 'card-tech-shop':
+                    document.querySelector('#modal-window-techshop').classList.toggle('invisible');
+                    break;
+                default:
+                    break;
+            }
         });
     });
-
-//pasar boton a etiqueta a para abrir link desde javascript
 
     // to control the modal window in the projects area 
     const btnCloseModal = document.querySelectorAll('.btn-close-modal');
@@ -76,6 +85,11 @@ window.document.addEventListener("DOMContentLoaded", function () {
             let modalWindowMovies = document.querySelector('#modal-window-movies')
             if (!modalWindowMovies.classList.contains('invisible')){
                                 document.querySelector('#modal-window-movies').classList.toggle('invisible');
+            }
+
+            let modalWindwTechshop = document.querySelector('#modal-window-techshop')
+            if (!modalWindwTechshop.classList.contains('invisible')){
+                                document.querySelector('#modal-window-techshop').classList.toggle('invisible');
             }
 
         });
@@ -101,7 +115,3 @@ window.document.addEventListener("DOMContentLoaded", function () {
     };
 
 });
-
-// photo profile
-// https://www.youtube.com/watch?v=MJQwe2PUzAo&t=406s
-// https://www.youtube.com/watch?v=LBPtQ7JiLTY

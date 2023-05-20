@@ -1,0 +1,10 @@
+        nueva barra de titulos
+        
+        <div class="relative w-120 py-2.5 px-36  bg-[#212121]  border-b-2 border-blue-500 ">
+            <p class="text-[#00a6ed] text-3xl font-semibold">About</p>
+            <!-- test -->
+            <span
+                class="box-content absolute block w-full h-full top-0 left-0 z-0  bg-[#212121] border-b-4 border-r-[20px] border-blue-500  origin-bottom-left -skew-x-[30deg]"></span>
+                <span
+                class="box-content absolute block w-full h-full top-0 left-0 -z-10 bg-blue-500 border-b-4 border-r-[20px] border-blue-500  origin-bottom-left -skew-x-[30deg]"></span>
+        </div>
