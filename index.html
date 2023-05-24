@@ -20,8 +20,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=Genos:wght@200;400&family=Rajdhani:wght@400;500&display=swap"
         rel="stylesheet" />
-
-    <title>Jose Leon - Web Designer</title>
+    <!-- --------email js------------->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("L9QqM23w2oL9wqJg4");
+        })();
+    </script>
+    <title>Jose Leon - Web Developer</title>
     <link rel="icon" type="image/x-icon" href="icons/web-design-32.png" />
 </head>
 <!-- genos, rajdhani, Audiowide -->
@@ -124,15 +131,12 @@ font-family: 'Rajdhani', sans-serif; -->
                         Hi, I'm
                         <a class="font-bold underline decoration-sky-500">José León</a>
                     </p>
-                    <!-- <p class="text-[#00a6ed] text-5xl font-bold">Web Designer</p> -->
                     <p
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 text-[2.6rem] xl:text-[4rem] font-['Audiowide']">
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 text-[2.5rem] xl:text-[4rem] font-['Audiowide']">
                         Web Developer
                     </p>
-                    <!-- <span class="font-['Audiowide'] text-5xl bg-clip-text text-transparent bg-gradient-to-r bg-gradient-to-br from-green-400 to-blue-600">Web Designer</span> -->
                     <p class="my-1 text-white text-xl">based in Frankfurt Germany</p>
                 </section>
-                <!-- buttons contact/download cv  -->
                 <section class="my-3">
                     <button id="btn-contact" type="button"
                         class="w-32 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center mr-2 mb-2">
@@ -273,7 +277,6 @@ font-family: 'Rajdhani', sans-serif; -->
             </header>
             <section
                 class="relative container m-auto flex flex-col md:flex-row md:flex-wrap justify-center items-center">
-                <!-- <section class="border relative  px-4 space-y-4 md:space-y-0 md:space-x-4 container flex flex-col md:flex-row md:flex-wrap justify-center items-center m-auto"> -->
 
                 <!-- card projects  -->
                 <!-- card my portfolio  -->
@@ -371,7 +374,7 @@ font-family: 'Rajdhani', sans-serif; -->
                                         </p>
                                         <p class="text-white">
                                             <a
-                                                href="https://github.com/jleon80/Portfolio/tree/master">https://github.com/jleon80/Portfolio/tree/master</a>
+                                                href="https://github.com/jleon80/Portfolio">https://github.com/jleon80/Portfolio</a>
                                         </p>
                                     </div>
                                 </div>
@@ -393,7 +396,6 @@ font-family: 'Rajdhani', sans-serif; -->
                             </div>
                         </div>
                     </div>
-                    <!-- ---  -->
                 </div>
 
                 <!-- card my Movie Time  -->
@@ -447,11 +449,12 @@ font-family: 'Rajdhani', sans-serif; -->
                             </div>
 
                             <!-- Modal body -->
-                            <div class="p-2 md:p-6 space-y-3 md:space-x-6 flex flex-col md:flex-row items-center">
+                            <div
+                                class="border p-2 md:p-6 space-y-3 md:space-x-6 flex flex-col md:flex-row items-center">
                                 <figure class="shrink-0">
                                     <img class="w-60 md:w-96" src="img/projects/web-movietime-javascript.png" alt="" />
                                 </figure>
-                                <div class="space-y-2 px-8 md:px-0">
+                                <div class="border space-y-2 px-8 md:px-0">
                                     <div>
                                         <p class="text-base font-semibold text-gray-400">
                                             PROJECT NAME
@@ -514,7 +517,6 @@ font-family: 'Rajdhani', sans-serif; -->
                             </div>
                         </div>
                     </div>
-                    <!-- ---  -->
                 </div>
 
                 <!-- card my Tech Shop  -->
@@ -633,7 +635,6 @@ font-family: 'Rajdhani', sans-serif; -->
                             </div>
                         </div>
                     </div>
-                    <!-- ---  -->
                 </div>
             </section>
         </section>
@@ -652,22 +653,24 @@ font-family: 'Rajdhani', sans-serif; -->
                     </p>
                 </div>
 
-                <form class="m-4 p-4 rounded-lg bg-[#212121] space-y-2" action="" method="post">
+                <form class="max-w-md m-4 p-4 rounded-lg bg-[#212121] space-y-2">
                     <input type="text" name="name" id="name"
-                        class="block w-full rounded-lg px-2 bg-neutral-700 border border-neutral-600 text-white text-lg"
+                        class="w-full rounded-lg px-2 bg-neutral-700 border border-neutral-600 text-white text-lg"
                         placeholder="Your name here" required />
+                    <span id="error-name" class="hidden text-red-600">Name is required</span>
                     <input type="email" name="email" id="email"
-                        class="block w-full rounded-lg px-2 bg-neutral-700 border border-neutral-600 text-white text-lg"
+                        class="w-full rounded-lg px-2 bg-neutral-700 border border-neutral-600 text-white text-lg"
                         placeholder="name@example.com" required />
+                    <span id="error-email" class="hidden text-red-600">Email is required</span>
                     <textarea style="resize: none" id="message" name="message" rows="4" cols="33"
                         placeholder="Your message here" required
                         class="w-full bg-neutral-700 rounded-lg px-2 border border-neutral-600 text-white text-lg"></textarea>
-
-                    <button type="button"
-                        class="w-32 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center mr-2 mb-2">
+                    <span id="error-message" class="hidden text-red-600">Message is required</span>
+                    <br>
+                    <button id="btn-email-submit" type="button"
+                        class="w-32 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3  mr-2 mb-2">
                         Submit
                     </button>
-                    <!-- <a href="mailto:example@example.com?subject=Subject&body=Body">Send Email</a> -->
                 </form>
             </section>
         </section>

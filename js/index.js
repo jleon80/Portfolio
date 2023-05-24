@@ -28,10 +28,10 @@ window.document.addEventListener("DOMContentLoaded", function () {
     })
 
     document.addEventListener('scroll', (e) => {
-        const isScrollInsideMenu = menuItems.contains(e.target);
-        if (!isScrollInsideMenu && !menuItems.classList.contains('hidden')) {
-            buttonMenu.click();
-        }
+        // const isScrollInsideMenu = menuItems.contains(e.target);
+        // if (!isScrollInsideMenu && !menuItems.classList.contains('hidden')) {
+        //     buttonMenu.click();
+        // }
     });
 
     const menuATags = document.querySelectorAll('.menu-item');
@@ -78,18 +78,18 @@ window.document.addEventListener("DOMContentLoaded", function () {
         btn.addEventListener('click', () => {
 
             let modalWindowPortfolio = document.querySelector('#modal-window-portfolio')
-            if (!modalWindowPortfolio.classList.contains('invisible')){
-                                document.querySelector('#modal-window-portfolio').classList.toggle('invisible');
+            if (!modalWindowPortfolio.classList.contains('invisible')) {
+                document.querySelector('#modal-window-portfolio').classList.toggle('invisible');
             }
 
             let modalWindowMovies = document.querySelector('#modal-window-movies')
-            if (!modalWindowMovies.classList.contains('invisible')){
-                                document.querySelector('#modal-window-movies').classList.toggle('invisible');
+            if (!modalWindowMovies.classList.contains('invisible')) {
+                document.querySelector('#modal-window-movies').classList.toggle('invisible');
             }
 
             let modalWindwTechshop = document.querySelector('#modal-window-techshop')
-            if (!modalWindwTechshop.classList.contains('invisible')){
-                                document.querySelector('#modal-window-techshop').classList.toggle('invisible');
+            if (!modalWindwTechshop.classList.contains('invisible')) {
+                document.querySelector('#modal-window-techshop').classList.toggle('invisible');
             }
 
         });
@@ -113,5 +113,104 @@ window.document.addEventListener("DOMContentLoaded", function () {
             mybutton.style.display = "none";
         }
     };
+
+
+    // send email from javascript 
+    const sendEmail = (callbackCheckForm) => {
+        let params = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+        };
+
+        const serviceID = 'service_okq5u8k';
+        const templateID = 'template_g4lfsds';
+
+        if (callbackCheckForm(params.name, params.email, params.message)) {
+            emailjs
+                .send(serviceID, templateID, params)
+                .then((res) => {
+                    document.getElementById('name').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('message').value = '';
+                    console.log(res);
+                    alert('Your message was sent successfully')
+                })
+                .catch((err) => console.log(err));
+        }
+
+
+    }
+
+    // check email 
+    const checkEmail = (email) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email)
+    }
+
+    // to check the form fields 
+    function checkForm(name, email, message) {
+
+        // check name 
+        if (name === "") {
+            document.getElementById('name').classList.replace('border-neutral-600', 'border-red-600');
+            document.getElementById('error-name').style.display = 'inline';
+            return false; // prevent to send 
+        } else {
+            document.getElementById('error-name').style.display = 'none';
+            document.getElementById('name').classList.replace('border-red-600', 'border-neutral-600');
+        }
+
+        // check email 
+        if (!checkEmail(email)) {
+            document.getElementById('email').classList.replace('border-neutral-600', 'border-red-600');
+            document.getElementById('error-email').style.display = 'inline';
+            return false; // prevent to send 
+        } else {
+            document.getElementById('error-email').style.display = 'none';
+            document.getElementById('email').classList.replace('border-red-600', 'border-neutral-600');
+        }
+
+        // check message 
+        if (message === "") {
+            document.getElementById('message').classList.replace('border-neutral-600', 'border-red-600');
+            document.getElementById('error-message').style.display = 'inline';
+            return false; // prevent to send 
+        } else {
+            document.getElementById('error-message').style.display = 'none';
+            document.getElementById('message').classList.replace('border-red-600', 'border-neutral-600');
+        }
+        // if everything is OK
+        return true;
+    }
+
+    // when the inputs change update border color en hide error message 
+    const inputName = document.getElementById('name');
+    const inputEmail = document.getElementById('email');
+    const inputMessage = document.getElementById('message');
+
+    inputName.addEventListener('input', () => {
+        document.getElementById('error-name').style.display = 'none';
+        classList.replace('border-red-600', 'border-neutral-600');
+    });
+
+    inputEmail.addEventListener('input', () => {
+        if(checkEmail(inputEmail.value)){
+            document.getElementById('error-email').style.display = 'none';
+            inputEmail.classList.replace('border-red-600', 'border-neutral-600');
+        }
+    });
+
+    inputMessage.addEventListener('input', () => {
+        document.getElementById('error-message').style.display = 'none';
+        inputMessage.classList.replace('border-red-600', 'border-neutral-600');
+    });
+
+    const btnSendEmail = document.getElementById('btn-email-submit');
+
+    // send email 
+    btnSendEmail.addEventListener('click', () => {
+        sendEmail(checkForm);
+    });
 
 });
