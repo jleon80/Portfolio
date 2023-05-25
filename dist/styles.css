@@ -2114,10 +2114,6 @@ video {
   --tw-bg-opacity: 0.6;
 }
 
-.bg-\[url\(\'\/img\/path24\.svg\'\)\] {
-  background-image: url('/img/path24.svg');
-}
-
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -2309,16 +2305,6 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.py-1\.5 {
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
 }
 
 .py-2 {
