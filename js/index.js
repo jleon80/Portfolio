@@ -2,6 +2,7 @@
 
 window.document.addEventListener("DOMContentLoaded", function () {
 
+    // to open en close menu 
     const buttonMenu = document.querySelector('#menu-button');
     const menuItems = document.querySelector('#menu-container');
     const btnContact = document.querySelector('#btn-contact');
@@ -19,21 +20,39 @@ window.document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    document.addEventListener('click', (e) => {
+
+    // to show language menu 
+    const menuLang = document.getElementById('language-menu');
+    const languageBtn = document.getElementById('language-button')
+    languageBtn.addEventListener('click', () => {
+        menuLang.classList.toggle('hidden');
+    })
+
+    // to close the menu when clicked outside of it. 
+    window.document.addEventListener('click', (e) => {
+        // menu items 
         const isClickInsideMenu = menuItems.contains(e.target);
         const isClickbuttonMenu = buttonMenu.contains(e.target);
         if (!isClickInsideMenu && !isClickbuttonMenu && !menuItems.classList.contains('hidden')) {
             buttonMenu.click();
         }
+        // menu language 
+        const isclickedLanguageBtn = languageBtn.contains(e.target); 
+        if (!isclickedLanguageBtn && !menuLang.classList.contains('hidden')) {
+            menuLang.classList.toggle('hidden');
+
+        }
     })
 
-    document.addEventListener('scroll', (e) => {
+    // to hide the menu on scroll 
+    window.document.addEventListener('scroll', (e) => {
         // const isScrollInsideMenu = menuItems.contains(e.target);
         // if (!isScrollInsideMenu && !menuItems.classList.contains('hidden')) {
         //     buttonMenu.click();
         // }
     });
 
+    // to close the menu on click on a menu item 
     const menuATags = document.querySelectorAll('.menu-item');
     menuATags.forEach(aTag => {
         aTag.addEventListener('click', (e) => {
@@ -41,6 +60,7 @@ window.document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // move to contact section 
     btnContact.addEventListener('click', () => {
         const section = document.getElementById('contact');
         if (section) {
@@ -54,7 +74,7 @@ window.document.addEventListener("DOMContentLoaded", function () {
     const btnOpenModal = document.querySelectorAll('.open-details-modal');
     btnOpenModal.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            let card = e.target.parentNode.parentNode.parentNode.id
+            let card = e.target.parentNode.parentNode.parentNode.parentNode.id
 
             switch (card) {
                 case 'card-portfolio':
@@ -123,6 +143,7 @@ window.document.addEventListener("DOMContentLoaded", function () {
             message: document.getElementById('message').value,
         };
 
+        //if you are reading this, please use your own Id´s :)
         const serviceID = 'service_okq5u8k';
         const templateID = 'template_g4lfsds';
 
@@ -195,7 +216,7 @@ window.document.addEventListener("DOMContentLoaded", function () {
     });
 
     inputEmail.addEventListener('input', () => {
-        if(checkEmail(inputEmail.value)){
+        if (checkEmail(inputEmail.value)) {
             document.getElementById('error-email').style.display = 'none';
             inputEmail.classList.replace('border-red-600', 'border-neutral-600');
         }

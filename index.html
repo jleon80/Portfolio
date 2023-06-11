@@ -51,10 +51,41 @@ font-family: 'Rajdhani', sans-serif; -->
                 </a>
 
                 <section class="flex md:order-2 my-2">
-                    <button class="text-white">
-                        <span class="fi fi-us mx-1"></span><span class="mr-1">EN</span>
-                    </button>
+                    <!-- language option  -->
+                    <section class="m-auto">
+                        <button id="language-button" class="text-white">
+                            <span class="fi fi-us mx-1"></span><span class="hover:text-slate-200 mr-1">EN</span>
+                        </button>
+                        <!-- to choose a language  -->
+                        <div id="language-menu"
+                            class="hidden absolute border border-[#00a6ed] mt-6 md:mt-8 -ml-10 md:-ml-24 overflow-x-visible mr-2  rounded-lg bg-[#212121] shadow ">
+                            <ul class="py-2">
+                                <li>
+                                    <a href="#"
+                                        class="text-md block px-4 py-2 text-gray-100 hover:text-white  hover:bg-[#00a6ed]"
+                                        role="menuitem">
+                                        <div class="inline-flex items-center">
+                                            <span class="fi fi-es mx-1"></span><span
+                                                class="mr-1 hidden md:block">Spanish</span>(ES)
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-md block px-4 py-2 text-gray-100 hover:text-white  hover:bg-[#00a6ed]"
+                                        role="menuitem">
+                                        <div class="inline-flex items-center">
+                                            <span class="fi fi-de mx-1"></span><span
+                                                class="mr-1 hidden md:block">German</span>(DE)
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
 
+
+                    <!-- hamburger menu button  -->
                     <button id="menu-button" class="md:hidden rounded-lg mx-3 py-1.5 px-2 bg-[#585858] text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="h-8 w-8">
@@ -122,9 +153,9 @@ font-family: 'Rajdhani', sans-serif; -->
                     <img class="rounded-lg shadow-md shadow-cyan-500/50 transition duration-150 ease-in-out hover:-translate-y-2 hover:scale-150"
                         src="img/Group 5.svg" alt="tailwind image" />
                 </div>
+
             </section>
             <!-- details about me  -->
-            <!-- <section class="border border-yellow-500  md:order-1 md:m-auto"></section> -->
             <section class="flex flex-col justify-center">
                 <section class="my-2">
                     <p class="my-1 text-white text-xl">
@@ -132,8 +163,9 @@ font-family: 'Rajdhani', sans-serif; -->
                         <a class="font-bold underline decoration-sky-500">José León</a>
                     </p>
                     <p
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 text-[2.5rem] xl:text-[4rem] font-['Audiowide']">
+                        class="animate-text bg-gradient-to-r from-sky-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-[2.5rem] xl:text-[4rem] font-['Audiowide']">
                         Web Developer
+
                     </p>
                     <p class="my-1 text-white text-xl">based in Frankfurt Germany</p>
                 </section>
@@ -155,24 +187,31 @@ font-family: 'Rajdhani', sans-serif; -->
 
         <!-- about section  -->
 
-        <section class="space-y-4 w-full my-10">
+        <article class="space-y-4 w-full my-10">
             <header class="border-solid border-y border-sky-500 bg-[#212121]">
                 <p class="py-3 text-[#00a6ed] text-3xl text-center">About</p>
             </header>
             <section class="max-w-4xl md:flex items-center m-auto">
                 <p class="m-4 text-white text-justify">
-                    Hello, my name is Jose Leon, I´m a Freelance
-                    <a class="underline decoration-indigo-500"><strong>Web Developer</strong></a>
-                    and
-                    <a class="underline decoration-pink-500"><strong>Javascript</strong></a>
-                    specialist. Feel free to take a look at my projects in the
-                    <a href="#projects" class="underline decoration-sky-500"><strong>Projects</strong></a>
-                    section. Here you will also find articles and code related to IoT,
-                    Arduino, ESP32, Raspberry Pi, etc.
+                    "Hello!, my name is Jose Leon, I'm a Junior
+                    <a class="underline decoration-sky-500"><strong>
+                            Web Developer</strong></a> proficient in
+                    <strong>HTML</strong>, <strong>CSS</strong>
+                    , <strong>Javascript</strong>, <strong>Tailwind CSS</strong>,
+                    <strong>Sass</strong> ,<strong>Bootstrap</strong> ,<strong>React</strong>
+                    , and <strong>Node.js</strong> .
+                    I'm passionate about creating attractive and functional interfaces,
+                    and I love learning new technologies to enhance my skills and stay
+                    up-to-date with the latest trends in web development. I'm always
+                    seeking new challenges and opportunities to continue growing as a professional.
+                    Feel free to take a look at my projects in the <a href="#projects"
+                        class="underline decoration-amber-500"><strong>Projects</strong></a> section.
+                    Here you will also find articles and code related to <strong>IoT</strong>, <strong>Arduino</strong>,
+                    <strong>ESP32</strong>, <strong>Raspberry Pi</strong>, etc.
                 </p>
                 <section class="space-y-2">
                     <article class="mx-5 h-16 rounded-lg bg-[#212121] flex">
-                        <section class="flex items-center rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
+                        <section class="flex items-center w-7 rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
                             <p style="writing-mode: vertical-lr; transform: rotate(180deg)"
                                 class="px-1 text-white text-sm">
                                 Name
@@ -184,7 +223,7 @@ font-family: 'Rajdhani', sans-serif; -->
                     </article>
 
                     <article class="mx-5 h-16 rounded-lg bg-[#212121] flex">
-                        <section class="flex items-center rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
+                        <section class="flex items-center w-7 rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
                             <p style="writing-mode: vertical-lr; transform: rotate(180deg)"
                                 class="px-1 text-white text-sm">
                                 Location
@@ -195,7 +234,7 @@ font-family: 'Rajdhani', sans-serif; -->
                         </section>
                     </article>
                     <article class="mx-5 h-16 rounded-lg bg-[#212121] flex">
-                        <section class="flex items-center rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
+                        <section class="flex items-center w-7 rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
                             <p style="writing-mode: vertical-lr; transform: rotate(180deg)"
                                 class="px-1 text-white text-sm">
                                 Email
@@ -207,17 +246,17 @@ font-family: 'Rajdhani', sans-serif; -->
                     </article>
                 </section>
             </section>
-        </section>
+        </article>
 
         <!-- skills section  -->
-        <section id="skills" class="space-y-4 w-full my-10 scroll-mt-16 md:scroll-mt-20">
+        <article id="skills" class="space-y-4 w-full my-10 scroll-mt-16 md:scroll-mt-20">
             <header class="border-solid border-y border-sky-500 bg-[#212121]">
                 <p class="py-3 text-[#00a6ed] text-3xl text-center">Skills</p>
             </header>
             <section class="space-y-2 container flex flex-col items-center m-auto">
                 <article class="md:w-3/5 rounded-lg bg-[#212121] flex">
-                    <section class="flex items-center rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
-                        <p style="writing-mode: vertical-lr; transform: rotate(180deg)" class="px-1 text-white">
+                    <section class="flex items-center w-8 rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
+                        <p style="writing-mode: vertical-lr; transform: rotate(180deg)" class="px-1 text-white ">
                             Using Now
                         </p>
                     </section>
@@ -251,7 +290,7 @@ font-family: 'Rajdhani', sans-serif; -->
                 </article>
 
                 <article class="md:w-3/5 rounded-lg bg-[#212121] flex">
-                    <section class="flex items-center rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
+                    <section class="flex items-center w-8 rounded-l-lg bg-gradient-to-r from-cyan-500 to-blue-500">
                         <p style="writing-mode: vertical-lr; transform: rotate(180deg)" class="px-1 text-white">
                             Learning
                         </p>
@@ -268,10 +307,10 @@ font-family: 'Rajdhani', sans-serif; -->
                     </section>
                 </article>
             </section>
-        </section>
+        </article>
 
         <!-- projects section  -->
-        <section id="projects" class="space-y-8 w-full my-10 scroll-mt-16 md:scroll-mt-20">
+        <article id="projects" class="space-y-8 w-full my-10 scroll-mt-16 md:scroll-mt-20">
             <header class="border-solid border-y border-sky-500 bg-[#212121]">
                 <p class="py-3 text-[#00a6ed] text-3xl text-center">Projects</p>
             </header>
@@ -292,19 +331,31 @@ font-family: 'Rajdhani', sans-serif; -->
                     </figure>
 
                     <section
-                        class="invisible group-hover:visible space-x-3 btn-card-projects w-full h-full absolute top-0 left-0 flex justify-center items-center bg-neutral-950 bg-opacity-60 rounded-lg">
-                        <a href="https://portfolio-six-ivory-62.vercel.app/"
-                            class="-translate-y-40 group-hover:transition-transform group-hover:duration-500 group-hover:translate-y-0 w-24 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center">
-                            Visit<i class="ml-2 fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
+                        class="invisible group-hover:visible space-x-3 btn-card-projects w-full h-full absolute top-0 left-0 flex flex-col justify-center items-center bg-neutral-950 bg-opacity-60 rounded-lg">
+                        <p
+                            class="font-bold text-xl -translate-y-40 group-hover:transition-transform group-hover:duration-400 group-hover:translate-y-0">
+                            My Portfolio</p>
+                        <p
+                            class="text-gray-300 italic mb-2 -translate-y-40 group-hover:transition-transform group-hover:duration-400 group-hover:translate-y-0">
+                            HTML, Tailwind CSS, Javascript</p>
 
-                        <button
-                            class="open-details-modal -translate-y-40 group-hover:transition-transform group-hover:duration-500 group-hover:translate-y-0 w-24 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-cyan-800">
-                            <span
-                                class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-[#212121] rounded-md group-hover:bg-gray-600">
-                                Details
-                            </span>
-                        </button>
+                        <section
+                            class="space-x-2 my-2 -translate-y-40 group-hover:transition-transform group-hover:duration-500 group-hover:translate-y-0">
+
+                            <a href="https://portfolio-six-ivory-62.vercel.app/"
+                                class="w-24 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center">
+                                Visit<i class="ml-2 fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                            <button
+                                class="open-details-modal w-24 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-cyan-800">
+                                <span
+                                    class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-[#212121] rounded-md group-hover:bg-gray-600">
+                                    Details
+                                </span>
+                            </button>
+                        </section>
+
                     </section>
                 </article>
 
@@ -412,18 +463,27 @@ font-family: 'Rajdhani', sans-serif; -->
                     </figure>
 
                     <section id=""
-                        class="invisible group-hover:visible space-x-3 btn-card-projects w-full h-full absolute top-0 left-0 flex justify-center items-center bg-neutral-950 bg-opacity-60 rounded-lg">
-                        <a href="https://proyecto-final-javascript-eight.vercel.app/"
-                            class="-translate-y-40 group-hover:transition-transform group-hover:duration-300 group-hover:translate-y-0 w-24 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center">
-                            Visit<i class="ml-2 fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                        <button
-                            class="open-details-modal -translate-y-40 group-hover:transition-transform group-hover:duration-300 group-hover:translate-y-0 w-24 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-cyan-800">
-                            <span
-                                class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-[#212121] rounded-md group-hover:bg-gray-600">
-                                Details
-                            </span>
-                        </button>
+                        class="invisible group-hover:visible space-x-3 btn-card-projects w-full h-full absolute top-0 left-0 flex  flex-col justify-center items-center bg-neutral-950 bg-opacity-60 rounded-lg">
+                        <p
+                            class="font-bold text-xl -translate-y-40 group-hover:transition-transform group-hover:duration-400 group-hover:translate-y-0">
+                            Movie Time</p>
+                        <p
+                            class="text-gray-300 italic mb-2 -translate-y-40 group-hover:transition-transform group-hover:duration-400 group-hover:translate-y-0">
+                            HTML, Tailwind CSS, Javascript</p>
+                        <section
+                            class="space-x-2 my-2 -translate-y-40 group-hover:transition-transform group-hover:duration-500 group-hover:translate-y-0">
+                            <a href="https://proyecto-final-javascript-eight.vercel.app/"
+                                class="-translate-y-40 group-hover:transition-transform group-hover:duration-300 group-hover:translate-y-0 w-24 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center">
+                                Visit<i class="ml-2 fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <button
+                                class="open-details-modal -translate-y-40 group-hover:transition-transform group-hover:duration-300 group-hover:translate-y-0 w-24 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-cyan-800">
+                                <span
+                                    class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-[#212121] rounded-md group-hover:bg-gray-600">
+                                    Details
+                                </span>
+                            </button>
+                        </section>
                     </section>
                 </article>
 
@@ -449,8 +509,7 @@ font-family: 'Rajdhani', sans-serif; -->
                             </div>
 
                             <!-- Modal body -->
-                            <div
-                                class="p-2 md:p-6 space-y-3 md:space-x-6 flex flex-col md:flex-row items-center">
+                            <div class="p-2 md:p-6 space-y-3 md:space-x-6 flex flex-col md:flex-row items-center">
                                 <figure class="shrink-0">
                                     <img class="w-60 md:w-96" src="img/projects/web-movietime-javascript.png" alt="" />
                                 </figure>
@@ -533,18 +592,27 @@ font-family: 'Rajdhani', sans-serif; -->
                     </figure>
 
                     <section id=""
-                        class="invisible group-hover:visible space-x-3 btn-card-projects w-full h-full absolute top-0 left-0 flex justify-center items-center bg-neutral-950 bg-opacity-60 rounded-lg">
-                        <a href="https://final-project-jleon80.vercel.app/"
-                            class="-translate-y-40 group-hover:transition-transform group-hover:duration-300 group-hover:translate-y-0 w-24 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center">
-                            Visit<i class="ml-2 fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                        <button
-                            class="open-details-modal -translate-y-40 group-hover:transition-transform group-hover:duration-300 group-hover:translate-y-0 w-24 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-cyan-800">
-                            <span
-                                class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-[#212121] rounded-md group-hover:bg-gray-600">
-                                Details
-                            </span>
-                        </button>
+                        class="invisible group-hover:visible space-x-3 btn-card-projects w-full h-full absolute top-0 left-0 flex flex-col justify-center items-center bg-neutral-950 bg-opacity-60 rounded-lg">
+                        <p
+                            class="font-bold text-xl -translate-y-40 group-hover:transition-transform group-hover:duration-400 group-hover:translate-y-0">
+                            Tech Shop</p>
+                        <p
+                            class="text-gray-300 italic mb-2 -translate-y-40 group-hover:transition-transform group-hover:duration-400 group-hover:translate-y-0">
+                            HTML, Tailwind CSS</p>
+                        <section
+                            class="space-x-2 my-2 -translate-y-40 group-hover:transition-transform group-hover:duration-500 group-hover:translate-y-0">
+                            <a href="https://final-project-jleon80.vercel.app/"
+                                class="-translate-y-40 group-hover:transition-transform group-hover:duration-300 group-hover:translate-y-0 w-24 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-3 text-center">
+                                Visit<i class="ml-2 fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <button
+                                class="open-details-modal -translate-y-40 group-hover:transition-transform group-hover:duration-300 group-hover:translate-y-0 w-24 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-cyan-800">
+                                <span
+                                    class="w-32 relative px-4 py-2.5 transition-all ease-in duration-75 bg-[#212121] rounded-md group-hover:bg-gray-600">
+                                    Details
+                                </span>
+                            </button>
+                        </section>
                     </section>
                 </article>
 
@@ -637,10 +705,10 @@ font-family: 'Rajdhani', sans-serif; -->
                     </div>
                 </div>
             </section>
-        </section>
+        </article>
 
         <!-- contact section  -->
-        <section id="contact" class="space-y-4 w-full my-10 scroll-mt-16 md:scroll-mt-20">
+        <article id="contact" class="space-y-4 w-full my-10 scroll-mt-16 md:scroll-mt-20">
             <header class="border-solid border-y border-sky-500 bg-[#212121]">
                 <p class="py-3 text-[#00a6ed] text-3xl text-center">Contact</p>
             </header>
@@ -673,7 +741,7 @@ font-family: 'Rajdhani', sans-serif; -->
                     </button>
                 </form>
             </section>
-        </section>
+        </article>
     </main>
 
     <footer class="">
@@ -689,7 +757,8 @@ font-family: 'Rajdhani', sans-serif; -->
 
             <ul class="md:flex space-y-2 md:space-y-0 md:space-x-8 text-white">
                 <li>
-                    <a class="text-2xl hover:text-[#00a6ed]" href="https://github.com/jleon80" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a class="text-2xl hover:text-[#00a6ed]" href="https://github.com/jleon80" target="_blank"><i
+                            class="fa-brands fa-github"></i></a>
                 </li>
                 <li>
                     <a class="text-2xl hover:text-[#00a6ed]" href=""><i class="fa-brands fa-facebook"></i></a>
