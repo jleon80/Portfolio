@@ -137,6 +137,7 @@ window.document.addEventListener("DOMContentLoaded", function () {
 
     // send email from javascript 
     const sendEmail = (callbackCheckForm) => {
+        alert('this function is disabled')
         let params = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
