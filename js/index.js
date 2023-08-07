@@ -144,8 +144,8 @@ window.document.addEventListener("DOMContentLoaded", function () {
         };
 
         //if you are reading this, please use your own Id´s :)
-        const serviceID = 'service_okq5u8k';
-        const templateID = 'template_g4lfsds';
+        const serviceID = '';
+        const templateID = '';
 
         if (callbackCheckForm(params.name, params.email, params.message)) {
             emailjs
